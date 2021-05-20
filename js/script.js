@@ -11,7 +11,7 @@ function titleClickHandler(event){
 
   /* get 'href' attribute from the clicked link */
 
-  /* find the correct article using dasdasdasdas the selector (value of 'href' attribute) */
+  /* find the correct article using the selector (value of 'href' attribute) */
 
   /* add class 'active' to the correct article */ 
 }
