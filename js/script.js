@@ -25,7 +25,7 @@ function titleClickHandler(event){
   /* [DONE] get 'href' attribute from the clicked link */
 
 const href =  clickedElement.getAttribute('href');
-console.log('articleSelector', articleSelector);
+console.log('articleSelector');
 
   /* [DONE] find the correct article using the selector (value of 'href' attribute) */
 const targetArticle = document.querySelector(href);
@@ -39,3 +39,30 @@ const links = document.querySelectorAll('.titles a');
 for(let link of links){
   link.addEventListener('click', titleClickHandler);
 }
+
+// Left side titles
+
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+
+function generateTitleLinks(){
+
+  /* remove contents of titleList */
+  titleList = document.querySelectorAll.remove(optTitleListSelector)
+  /* for each article */
+
+    /* get the article id */
+
+    /* find the title element */
+
+    /* get the title from the title element */
+
+    /* create HTML of the link */
+
+    /* insert link into titleList */
+
+}
+
+generateTitleLinks();
+
