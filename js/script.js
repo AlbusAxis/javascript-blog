@@ -47,29 +47,55 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles';
 
 function generateTitleLinks(){
-
+ const clickedElement = this;
   /* remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
   function clearMessages(){
     document.getElementById(titleList).innerHTML = '';
-    document.getElementById('.list .titles').innerHTML = '';
+    
+    // document.getElementById('.list .titles').innerHTML = ''; <-- i'm not sure about that capitan
 
   
   /* for each article */
-  document.getElementById(optArticleSelector).innerHTML = '';
+  const articles = document.querySelectorAll(optArticleSelector);
+  for (let article of articles){
+    article.classList.remove(innerHTML);
+    console.log('innerHTML:', innerHTML);
+  }
   }
     /* get the article id */
-    document.getElementById
+    const articleId = clickedElement.getAttribute('id');
+    
     /* find the title element */
-    const titleElement = document.querySelector(optArticleSelector)
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+    
+    
     /* get the title from the title element */
-    for(let titleElement of titleList)
+    const title = clickedElement.getAttribute(articleTitle);
+    console.log('clickedElement:', title);
     /* create HTML of the link */
-const link = document.createElement('link');
+ 
+    /*const link = document.createElement('link');
 const linkText = document.createTextNode("Article");
-link
-    /* insert link into titleList */
+link.appendChild(linkText);               <------- Czy to też zadziała ?
+link.title = "title of the link";
+link.href = "#";
+document.body.appendChild(link); */
+
+const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+console.log(linkText);
+
+
+
+
+
+
+/* insert link into titleList */
   
+let html = html + document.getElementById(linkHTML);
+html.insertAdjacentHTML('afterend', html);
+
+
 }
 
 generateTitleLinks();
