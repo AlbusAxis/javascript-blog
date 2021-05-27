@@ -49,17 +49,17 @@ const optArticleSelector = '.post',
 function generateTitleLinks(){
  const clickedElement = this;
   /* remove contents of titleList */
-  const titleList = document.querySelector(optTitleListSelector);
+  
   function clearMessages(){
-    document.getElementById(titleList).innerHTML = '';
+    const titleList = document.querySelector(optTitleListSelector);
+    titleList.innerHTML = '';
     
-    // document.getElementById('.list .titles').innerHTML = ''; <-- i'm not sure about that capitan
 
   
   /* for each article */
   const articles = document.querySelectorAll(optArticleSelector);
   for (let article of articles){
-    article.classList.remove(innerHTML);
+    
     console.log('innerHTML:', innerHTML);
   }
   }
@@ -75,12 +75,7 @@ function generateTitleLinks(){
     console.log('clickedElement:', title);
     /* create HTML of the link */
  
-    /*const link = document.createElement('link');
-const linkText = document.createTextNode("Article");
-link.appendChild(linkText);               <------- Czy to też zadziała ?
-link.title = "title of the link";
-link.href = "#";
-document.body.appendChild(link); */
+   
 
 const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
 console.log(linkText);
@@ -95,6 +90,11 @@ console.log(linkText);
 let html = html + document.getElementById(linkHTML);
 html.insertAdjacentHTML('afterend', html);
 
+debugger;
+    const links = document.querySelectorAll('.titles a');
+
+    for(let link of links){
+        link.addEventListener('click', titleClickHandler);
 
 }
 
