@@ -118,7 +118,7 @@ function generateTags(){
     const dataTags = clickedElement.getAttribute(optArticleTagsSelector);
     console.log('clickedElement:', dataTags);
     /* split tags into array */
-
+    const articleTagsArray = articleTags.split(' ');
     /* START LOOP: for each tag */
 
       /* generate HTML of the link */
