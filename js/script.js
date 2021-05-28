@@ -106,16 +106,17 @@ generateTitleLinks();
 
 
 function generateTags(){
-  /* find all articles */
- const articles = document.querySelectorAll(optArticleTagsSelector);
-  /* START LOOP: for every article: */
-for (let article of articles)
-    /* find tags wrapper */
-
-    /* make html variable with empty string */
-
-    /* get tags from data-tags attribute */
-
+  /* [DONE] find all articles */
+    const articles = document.querySelectorAll(optArticleTagsSelector);
+  /* [DONE] START LOOP: for every article: */
+    for (let article of articles)
+    /* [DONE] find tags wrapper */
+     wrapper = article.querySelector(optArticleTagsSelector);
+    /* [DONE] make html variable with empty string */
+    let html = wrapper.innerHTML = '';
+    /* [DONE] get tags from data-tags attribute */
+    const dataTags = clickedElement.getAttribute(optArticleTagsSelector);
+    console.log('clickedElement:', dataTags);
     /* split tags into array */
 
     /* START LOOP: for each tag */
