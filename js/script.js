@@ -97,6 +97,5 @@ debugger;
         link.addEventListener('click', titleClickHandler);
 
 }
-
+}
 generateTitleLinks();
-
