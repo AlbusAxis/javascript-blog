@@ -120,18 +120,18 @@ function generateTags(){
     /* split tags into array */
     const articleTagsArray = articleTags.split(' ');
     /* START LOOP: for each tag */
-    for (let tag of articleTags);
+    for (let tag of articleTagsArray);
     console.log(tag);
       /* generate HTML of the link */
-      const linkHTML = '<li><a href="#' + tag + '"><span>' + articleTags + '</span></a></li>';
-      /* add generated code to html variable */
-        article.classList.add(linkHTML);
-    /* END LOOP: for each tag */
-    break (tag of articleTags);
-    /* insert HTML of all the links into the tags wrapper */
-      const allLinks = wrapper.innerHTML = linkHTML;
-  /* END LOOP: for every article: */
-  break;
+      const linkHTML = '<li><a href="#' + tag + '"><span>' + articleTags + '</span></a></li>'; // TEGO MOMENTU NIE JESTEM PEWNY
+      /* add generated code to html variable */                                                //
+        article.classList.add(linkHTML);                                                       //
+    /* END LOOP: for each tag */                                                               //
+    break (tag of articleTags);                                                                //
+    /* insert HTML of all the links into the tags wrapper */                                   //
+      const allLinks = wrapper.innerHTML = linkHTML;                                           //
+  /* END LOOP: for every article: */                                                           //
+  break;                                                                                       //
 }
 
 generateTags();
