@@ -165,3 +165,15 @@ function addClickListenersToTags(){
 }
 
 addClickListenersToTags();
+
+const postAuthor = '.post-author';
+// Lista Autorów
+function generateAuthors(){
+// Find authors
+const author = document.querySelectorAll(postAuthor);
+// Deleting author from wrapper
+const delateAuthor = document.getAttribute.remove(postAuthor);
+// Adding data author
+const addDataAuthor = document.classList.add('data-author');
+
+}
