@@ -170,9 +170,9 @@ addClickListenersToTags();
 // ADD Authors
 function generateAuthors(){
 // Find .post-author
-  const authors = document.querySelectorAll(optArticleAuthorSelector);
+  const articles = document.querySelectorAll(optArticleAuthorSelector);
   // Creating empty string
-  for (let article of authors){
+  for (let article of articles){
     const wrapper = article.querySelector(optArticleAuthorSelector);
     let html = '';
     wrapper.innerHTML = '';
