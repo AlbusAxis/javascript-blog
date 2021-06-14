@@ -84,7 +84,7 @@ generateTitleLinks();
 
 
 // LOOP END LOOP SUB MODULE 6.2
-
+const calculateTagsParams = 'tags';
 
 function generateTags(){
 
