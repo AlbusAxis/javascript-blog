@@ -154,16 +154,17 @@ for (let article of articles){
 }
 /* [NEW] find list of tags in right column */
 const tagList = document.querySelector('.tags');
-
+const tagsParams = calculateTagsParams(allTags);
+console.log('tagsParams:', tagsParams);
 /* [NEW] create variable for all links HTML code */
 let allTagsHTML = '';
 /* [NEW] START LOOP: for each tag in allTags */
 for (let tag of allTags){
   /* [NEW] generate code of link and add it to allTags */
-  allTagsHTML += tag + ' (' allTags[tag] + ') ';
+  allTagsHTML += '<li><a href="tag' + allTags[tag] + '"><span>' + allTags[tag] + '</span></a></li>';
 /* [NEW] END LOOP: for each tag in allTags*/
 }
-/* add html from allTags to tagList */
+/* [NEW] add html from allTags to tagList */
 tagList.innerHTML = allTagsHTML;
 generateTags();
 
