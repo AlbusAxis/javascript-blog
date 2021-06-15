@@ -188,15 +188,19 @@ const percentage = normalizedCount / normalizedMax;
 const classNumber = Math.floor( percentage * (optCloudClassCount - 1) + 1 );
 
 /* [NEW] create variable for all links HTML code */
-let allTagsHTML = '';
+const allTagsData = {tags: []};
 /* [NEW] START LOOP: for each tag in allTags */
 for (let tag of allTags){
   /* [NEW] generate code of link and add it to allTags */
-  allTagsHTML += tagLinkHTML //'<li><a class="" href="tag' + allTags[tag] + '"><span>' + allTags[tag] + '</span></a></li>';
+  allTagsData.tags.push({
+    tag: tag,
+    count: allTags[tag],
+    className: calculateTagClass(allTags[tag], tagsParams)
+  });//'<li><a class="" href="tag' + allTags[tag] + '"><span>' + allTags[tag] + '</span></a></li>';
 /* [NEW] END LOOP: for each tag in allTags*/
 }
 /* [NEW] add html from allTags to tagList */
-tagList.innerHTML = allTagsHTML;
+tagList.innerHTML = templates.tagCloudLink(allTagsData);
 generateTags();
 
 //  Click Tag Action <----------------------------------
