@@ -6,7 +6,7 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles';
 const optArticleTagsSelector = '.post-tags .list';
 const optArticleAuthorSelector = '.post-author';
-const optTagsListSelector = '.tags.list';
+const optTagsListSelector = '.tags .list';
 const optCloudClassCount = 5;
 const optCloudClassPrefix = 'tag-size-';
 
