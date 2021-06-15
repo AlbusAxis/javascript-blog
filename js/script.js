@@ -89,10 +89,10 @@ generateTitleLinks();
 const calculateTagsParams = 'tags';
 
 // Function calculateTagClass
-function calculateTagClass(count, params){
-const tag
+ function calculateTagClass(count, params){}
+const tagLinkHTML = calculateTagClass(allTags[tag], tagsParams);
+console.log('tagLinkHtml:', tagLinkHtml);
 
-}
 //Function generateTags
 function generateTags(){
 
@@ -165,7 +165,7 @@ const tagList = document.querySelector('.tags');
 /* Params */
 const tagsParams = calculateTagsParams(allTags);
 console.log('tagsParams:', tagsParams);
-const params {max,min};
+const params {max, min};
 max = 0
 min = 99999
 return params;
@@ -176,13 +176,17 @@ for(let tag in tags){
 if(tags[tag] > params.max){
   params.max = tags[tag];
 }
+const normalizedCount = count - params.min;
+const normalizedMax = params.max - params.min;
+const percentage = normalizedCount / normalizedMax;
+const classNumber = Math.floor( percentage * (optCloudClassCount - 1) + 1 );
 
 /* [NEW] create variable for all links HTML code */
 let allTagsHTML = '';
 /* [NEW] START LOOP: for each tag in allTags */
 for (let tag of allTags){
   /* [NEW] generate code of link and add it to allTags */
-  allTagsHTML += '<li><a class="" href="tag' + allTags[tag] + '"><span>' + allTags[tag] + '</span></a></li>';
+  allTagsHTML += tagLinkHTML //'<li><a class="" href="tag' + allTags[tag] + '"><span>' + allTags[tag] + '</span></a></li>';
 /* [NEW] END LOOP: for each tag in allTags*/
 }
 /* [NEW] add html from allTags to tagList */
