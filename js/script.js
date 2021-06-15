@@ -9,6 +9,7 @@ const optArticleAuthorSelector = '.post-author';
 const optTagsListSelector = '.tags .list';
 const optCloudClassCount = 5;
 const optCloudClassPrefix = 'tag-size-';
+const optAuthorsListSelector = '.data-author';
 
 function titleClickHandler(event){
   event.preventDefault();
@@ -261,9 +262,36 @@ function generateAuthors(){
     wrapper.innerHTML = html;
   }
 }
+/* All authors */
+let allAuthors = {};
+if(!allAuthors.hasOwnProperty(tag)){
+  /* [NEW] add generated code to allTags array */
+  allAuthors.tag = 1;
+}
+else {allAuthors[tag]++;}
+
+const tagsParams = calculateTagsParams(allAuthors);
+console.log('tagsParams:', tagsParams);
+const params {max, min};
+max = 0
+min = 99999
+return params;
+console.log('params:', params);
+for(let tag in tags){
+  console.log(tag + ' is used ' + tags[tag] + ' times');
+}
+if(tags[tag] > params.max){
+  params.max = tags[tag];
+}
+const normalizedCount = count - params.min;
+const normalizedMax = params.max - params.min;
+const percentage = normalizedCount / normalizedMax;
+const classNumber = Math.floor( percentage * (optCloudClassCount - 1) + 1 );
+
+
 generateAuthors();
 
-
+/* Click Handler Authors */
 function authorClickHandler(event){
 
   event.preventDefault();
@@ -294,7 +322,7 @@ function authorClickHandler(event){
 
   generateTitleLinks('[data-author="' + tag + '"]');
 }
-
+/* ClickListener Authors */
 function addClickListenersToAuthor(){
 
   const links = document.querySelectorAll('a[href^="data-author"]');
