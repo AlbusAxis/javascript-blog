@@ -171,10 +171,7 @@ const tagList = document.querySelector('.tags');
 /* Params */
 const tagsParams = calculateTagsParams(allTags);
 console.log('tagsParams:', tagsParams);
-const params {max, min};
-max = 0
-min = 99999
-return params;
+const params = { min: 0, max: 99999 };
 console.log('params:', params);
 for(let tag in tags){
   console.log(tag + ' is used ' + tags[tag] + ' times');
@@ -280,12 +277,9 @@ if(!allAuthors.hasOwnProperty(tag)){
 }
 else {allAuthors[tag]++;}
 
-const tagsParams = calculateTagsParams(allAuthors);
-console.log('tagsParams:', tagsParams);
-const params {max, min};
-max = 0
-min = 99999
-return params;
+const authorParams = calculateTagsParams(allAuthors);
+console.log('tagsParams:', authorParams);
+const paramsOfAuthor = { min: 0, max: 99999 };
 console.log('params:', params);
 for(let tag in tags){
   console.log(tag + ' is used ' + tags[tag] + ' times');
