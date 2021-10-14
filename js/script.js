@@ -250,13 +250,13 @@ addClickListenersToTags();
 // ADD Authors
 function generateAuthors(){
 // Find .post-author
-  const articles = document.querySelectorAll(optArticleAuthorSelector);
+  const author = document.querySelectorAll(optArticleAuthorSelector);
   // Creating empty string
-  for (let article of articles){
-    const wrapper = article.querySelector(optArticleAuthorSelector);
+  for (let author of authors){
+    const wrapper = author.querySelector(optArticleAuthorSelector);
     let html = '';
     wrapper.innerHTML = '';
-    const authorTags = article.getAttribute('data-author');
+    const authorTags = author.getAttribute('data-author');
 
     for (let tag of authorTags){
       console.log(tag);
