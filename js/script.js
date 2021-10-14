@@ -13,6 +13,7 @@ const optTagsListSelector = '.tags .list';
 const optCloudClassCount = 5;
 const optCloudClassPrefix = 'tag-size-';
 const optAuthorsListSelector = '.data-author';
+const tag = '.tag';
 
 function titleClickHandler(event){
   event.preventDefault();
