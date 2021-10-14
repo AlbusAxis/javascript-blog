@@ -2,7 +2,7 @@
 'use strict';
 const templates = {
   articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
-}
+};
 
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
@@ -94,7 +94,7 @@ generateTitleLinks();
 const calculateTagsParams = 'tags';
 
 // Function calculateTagClass
- function calculateTagClass(count, params){}
+function calculateTagClass(count, params){}
 const tagLinkHTML = calculateTagClass(allTags[tag], tagsParams);
 console.log('tagLinkHtml:', tagLinkHtml);
 
@@ -287,10 +287,10 @@ for(let tag in tags){
 if(tags[tag] > params.max){
   params.max = tags[tag];
 }
-const normalizedCount = count - params.min;
-const normalizedMax = params.max - params.min;
-const percentage = normalizedCount / normalizedMax;
-const classNumber = Math.floor( percentage * (optCloudClassCount - 1) + 1 );
+// const normalizedCount = count - params.min;
+// const normalizedMax = params.max - params.min;
+// const percentage = normalizedCount / normalizedMax;
+// const classNumber = Math.floor( percentage * (optCloudClassCount - 1) + 1 );
 
 
 generateAuthors();
